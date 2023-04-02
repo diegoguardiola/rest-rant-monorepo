@@ -32,30 +32,6 @@ function SignUpForm() {
 			<form onSubmit={handleSubmit}>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="firstName">First Name</label>
-						<input
-							required
-							value={user.firstName}
-							onChange={e => setUser({ ...user, firstName: e.target.value })}
-							className="form-control"
-							id="firstName"
-							name="firstName"
-						/>
-					</div>
-					<div className="col-sm-6 form-group">
-						<label htmlFor="lastName">Last Name</label>
-						<input
-							required
-							value={user.lastName}
-							onChange={e => setUser({ ...user, lastName: e.target.value })}
-							className="form-control"
-							id="lastName"
-							name="lastName"
-						/>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-sm-6 form-group">
 						<label htmlFor="email">Email</label>
 						<input
 							type="email"
@@ -65,6 +41,18 @@ function SignUpForm() {
 							className="form-control"
 							id="email"
 							name="email"
+						/>
+					</div>
+					<div className="col-sm-6 form-group">
+						<label htmlFor="password">Password</label>
+						<input
+							type="password"
+							required
+							value={user.password}
+							onChange={e => setUser({ ...user, password: e.target.value })}
+							className="form-control"
+							id="password"
+							name="password"
 						/>
 					</div>
 				</div>
